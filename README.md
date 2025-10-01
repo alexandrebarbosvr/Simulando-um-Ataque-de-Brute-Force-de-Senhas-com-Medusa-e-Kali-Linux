@@ -8,7 +8,7 @@ Meu ambiente está rodando em um Vmware Esxi, com uma rede totalmente separada d
 
 # ATAQUE A SERVIÇO FTP
 # CRIAÇÃO DOS ARQUIVOS 
-Feito a criação do arquivo de usuários e senhas para o teste, foi utilizado os comandos abaixo, ilustrado na imagem (figura4).
+Feito a criação do arquivo de usuários e senhas (Wordlists) para o teste, foi utilizado os comandos abaixo, ilustrado na imagem (figura4).
 
 echo -e "user\nmsfadmin\nadmin\nroot" > users.txt
 
@@ -25,5 +25,13 @@ A saída do comendo confirma uma combinação de usuário e senha como Usuário 
 
 Acesso concedido conforme imagem (figura6).
 
+# ATAQUE A PÁGINA WEB COM WORDLISTS
 
 
+Nesse caso iremos criar os arquivos com os usuário e as senhas conforme feito para o teste de ataque ao serviço de FTP, usamos os mesmos comandos.
+
+echo -e "user\nmsfadmin\nadmin\nroot" > users.txt
+
+echo -e "123456\npassword\nqwerty\nmsfadmin" > pass.txt
+
+Após gerar os arquivos, iremos ao ataque de fato.
