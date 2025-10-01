@@ -1,4 +1,4 @@
-# Simulando-um-Ataque-de-Brute-Force-de-Senhas-com-Medusa-e-Kali-Linux
+# Simulando um Ataque de Brute Force de Senhas com Medusa e Kali Linux
 Desafio Santander Cybersegurança 2025
 
 Nessa fase do Treinamento, aprofundamos um pouco mais sobre as ferramentas de ataque de força bruta, com lista de usuários e senhas em um arquiv.
