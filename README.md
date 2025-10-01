@@ -22,7 +22,7 @@ A saída do comendo confirma uma combinação de usuário e senha como Usuário 
 
 # Efetuando o acesso para ver se a combinação realmente está funcionando.
 
-Acesso concedido conformoe imagem (figura6).
+Acesso concedido conforme imagem (figura6).
 
 
 
