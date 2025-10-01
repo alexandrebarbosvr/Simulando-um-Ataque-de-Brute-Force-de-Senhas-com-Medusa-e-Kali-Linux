@@ -70,3 +70,10 @@ medusa -h 192.168.222.3 -U smb_users.txt -P senhas_spray -M smbnt -t2 -T 50 onde
 
 Executando o comando temos a saída ilustrada na imagem12.
 Analisando a saída do comando percebemos que temos uma saida AACOUNT FOUND com o usuário msfadmin e senha msfadmin, na qual será usada para acesso ao compartilhamento de rede.
+
+Agora iremos testar o acesso ao compartilhamento no host destino com o comando abaixo:
+
+smbclient -L //192.168.222.3 -U msfadmin e posteriormente colocando a senha msfadmin.
+Processo ilustrado na imagem13.
+
+Com isso finalizamos o desafio, obtendo ótimos aprendizados.
